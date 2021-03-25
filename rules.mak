@@ -40,6 +40,11 @@ $(__ARCHIVE): $(__OBJECTS)
 	@ echo "Created $(__ARCHIVE)"
 endif
 
+#$(SUBOBJDIR)/%.a: %.rs $(DEPENDS)
+#	mkdir -p $(SUBOBJDIR)
+#	$(shell mkdir -p $(shell dirname $@))
+#	$(RC) -c $(RCFLAGS) -o $@ $<
+
 $(SUBOBJDIR)/%.o: %.c $(DEPENDS)
 	mkdir -p $(SUBOBJDIR)
 	$(shell mkdir -p $(shell dirname $@))

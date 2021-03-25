@@ -6,7 +6,7 @@ PROGRAM = mystenc.so
 
 SOURCES += $(SUBOBJDIR)/myst_t.c
 SOURCES += enc.c
-SOURCES += clock.c
+SOURCES += clock.rs
 SOURCES += syscall.c
 SOURCES += ../config.c
 SOURCES += ../common.c

@@ -7,7 +7,7 @@
 #define NANO_IN_SECOND 1000000000
 #define MICRO_IN_SECOND 1000000
 
-struct clock_ctrl
+/*struct clock_ctrl
 {
     long realtime0;
     long monotime0;
@@ -15,6 +15,8 @@ struct clock_ctrl
     unsigned long interval;
     volatile int done;
 };
+*/
+struct clock_ctrl;
 
 int myst_setup_clock(struct clock_ctrl*);
 
