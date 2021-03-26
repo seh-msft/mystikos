@@ -1,12 +1,13 @@
 TOP=$(abspath ../../..)
 SUBBINDIR=$(TOP)/build/lib/openenclave
+
 include $(TOP)/defs.mak
 
 PROGRAM = mystenc.so
 
 SOURCES += $(SUBOBJDIR)/myst_t.c
 SOURCES += enc.c
-SOURCES += clock.rs
+#SOURCES += clock/src/lib.rs
 SOURCES += syscall.c
 SOURCES += ../config.c
 SOURCES += ../common.c
@@ -19,6 +20,7 @@ INCLUDES = $(OEENCLAVE_INCLUDES) -I$(SUBOBJDIR) -I../
 
 CFLAGS = $(OEENCLAVE_CFLAGS)
 
+LIBS += ./libclock.so
 LIBS += $(LIBDIR)/libjson.a
 LIBS += $(LIBDIR)/libmysttargetsgxenclave.a
 LIBS += $(LIBDIR)/libmystutils.a
