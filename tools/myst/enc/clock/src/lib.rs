@@ -17,7 +17,7 @@ pub struct clock_ctrl {
 }
 
 #[no_mangle]
-pub extern "C" fn myst_setup_clock(ctrl: &mut clock_ctrl) -> c_int {
+pub extern "C" fn myst_setup_clock(ctrl:  *const clock_ctrl) -> c_int {
     -1
 }
 

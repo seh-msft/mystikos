@@ -4,6 +4,7 @@ target/
 *.o
 *.a
 *.pem
+bindings.rs
 
 third_party/musl/musl/lib
 third_party/enclave-musl/musl/lib/
