@@ -1,14 +1,17 @@
 [package]
-name = "clock"
+name = "cwall"
 version = "0.1.0"
 authors = ["seh"]
 edition = "2018"
+# Need links=?
 
 [lib]
-crate-type=["cdylib"]
+crate-type=["lib"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 libc = "0.2"
-cwall = { path = "../libcwall" }
+
+[build-dependencies]
+bindgen = "0.53.1"

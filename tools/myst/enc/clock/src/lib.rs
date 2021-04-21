@@ -20,3 +20,10 @@ pub struct clock_ctrl {
 pub extern "C" fn myst_setup_clock(ctrl: &mut clock_ctrl) -> c_int {
     -1
 }
+
+fn _check(overflowed: bool) {
+	if !overflowed {
+		return;
+	}
+	
+}
